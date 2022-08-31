@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>puzzle Game</title>
+    <style>
+        body {
+            background-color: orange;
+            color: black;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+            font-size: 3rem;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .timer,
+        .errors,
+        .accuracy,
+        .cpm,
+        .wpm {
+            background-color: #ccda46;
+            height: 80px;
+            width: 100px;
+            margin: 8px;
+            padding: 12px;
+            border-radius: 20%;
+            box-shadow: black 5px 8px 5px;
+        }
+
+        .cpm,
+        .wpm {
+            display: none;
+        }
+
+        .text {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .current_time,
+        .current_errors,
+        .current_accuracy,
+        .current_cpm,
+        .current_wpm {
+            font-size: 20px;
+        }
+
+        .paragraph {
+            background-color: #ccda46;
+            font-size: 1.5rem;
+            margin: 10px;
+            padding: 40px;
+            box-shadow: black 5px 8px 5px;
+            text-transform: uppercase;
+        }
+
+        .input_area {
+            background-color: #f5f5c6;
+            height: 60px;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 10px;
+            padding: 50px;
+            border: 0px;
+            box-shadow: black 5px 8px 5px;
+        }
+
+        .incorrect_char {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .correct_char {
+            color: darkgreen;
+        }
+
+        .restart_btn {
+            display: none;
+            background-color: #326765;
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 0px;
+            box-shadow: black 5px 8px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Typing speed test </div>
+        <div class="row">
+            <div class="header">
+                <div class="wpm">
+                    <div class="text">WPM</div>
+                    <div class="current_wpm">100</div>
+                </div>
+                <div class="cpm">
+                    <div class="text">CPM</div>
+                    <div class="current_cpm">100</div>
+                </div>
+                <div class="errors">
+                    <div class="text">Errors</div>
+                    <div class="current_errors">0</div>
+                </div>
+                <div class="timer">
+                    <div class="text">Time</div>
+                    <div class="current_time">60s</div>
+                </div>
+                <div class="accuracy">
+                    <div class="text">% Accuracy</div>
+                    <div class="current_accuracy">100</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="paragraph">Click the text to start the game </div>
+        </div>
+        <div class="row">
+            <textarea class="input_area" placeholder="Start Typing Here..." rows="1"></textarea>
+        </div>
+        <button class="restart_btn">Restart</button>
+    </div>
+    <script src="puzzlejavascript.js"></script>
+</body>
+</html>
